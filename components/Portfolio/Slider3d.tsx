@@ -55,7 +55,7 @@ const Slider3D: React.FC = () => {
         className="slider"
         style={{ transform: `perspective(1000px) rotateY(${rotation}deg)` }}
       >
-        {projects.map((project, index) => (
+        {correctOrderProjects.map((project, index) => (
           <span
             style={{ "--i": index + 1 } as React.CSSProperties}
             key={project.id}
