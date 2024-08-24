@@ -7,7 +7,7 @@ import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 
 const Slider3D: React.FC = () => {
-  const correctOrderProjects = projects.reverse();
+  const correctOrderProjects = [...projects].reverse();
   const [projectIndex, setProjectIndex] = useState<number>(0);
   const [activeProject, setActiveProject] = useState<Project | null>(
     projects[projectIndex]
@@ -22,7 +22,7 @@ const Slider3D: React.FC = () => {
     const timeoutId = setTimeout(() => setAnimateTitle(false), 500); // Adjust timing based on your animation duration
 
     return () => clearTimeout(timeoutId);
-  }, [projectIndex]);
+  }, [projectIndex, activeProject]);
 
   const nextProject = () => {
     setProjectIndex((prevIndex) =>
@@ -38,14 +38,17 @@ const Slider3D: React.FC = () => {
     setRotation((prevRotation) => prevRotation - 60);
   };
 
+  const navigate = (path: string): void => {
+    router.push(path);
+  }
+
   return (
     <div className="flex flex-col gap-7 lg:gap-14 items-center relative">
       <div className="flex flex-col gap-5 min-h-16 min-h-[90px] lg:min-h-[120px]">
         {activeProject && (
           <div
-            className={`text-[#47AEDE] font-recoletaBlack text-3xl md:text-3xl lg:text-5xl xl:text-5xl ${
-              animateTitle ? "project-name" : ""
-            }`}
+            className={`text-[#47AEDE] font-recoletaBlack text-3xl md:text-3xl lg:text-5xl xl:text-5xl ${animateTitle ? "project-name" : ""
+              }`}
           >
             {activeProject.name}
           </div>
@@ -57,16 +60,15 @@ const Slider3D: React.FC = () => {
       >
         {correctOrderProjects.map((project, index) => (
           <span
+            onClick={() => navigate(`/projects/${project.id}`)}
             style={{ "--i": index + 1 } as React.CSSProperties}
             key={project.id}
           >
-            <a href={`/projects/${project.id}`}>
-              <img
-                src={project.imgSrc}
-                alt={project.name}
-                className="absolute top-0 left-0 w-full h-full rounded-[15px] border-black border-[6px] hover:translate-y-[-0.25rem] duration-500 cursor-pointer"
-              />
-            </a>
+            <img
+              src={project.imgSrc}
+              alt={project.name}
+              className="absolute top-0 left-0 w-full h-full rounded-[15px] border-black border-[6px] hover:translate-y-[-0.25rem] duration-500 cursor-pointer"
+            />
           </span>
         ))}
       </div>
