@@ -107,10 +107,10 @@ const ContactMe = () => {
               Projetos
             </div>
 
-            <div onClick={() => router.push("/projects/1")} className="opacity-60 hover:opacity-40 font-[300]">Breaking News</div>
-            <div onClick={() => router.push("/projects/6")} className="opacity-60 hover:opacity-40 font-[300]">Nike Shoes</div>
-            <div onClick={() => router.push("/projects/3")} className="opacity-60 hover:opacity-40 font-[300]">SF Media</div>
-            <div onClick={() => router.push("/projects/2")} className="opacity-60 hover:opacity-40 font-[300]">Franklin Store</div>
+            <div onClick={() => router.push("/projects/1")} className="opacity-60 hover:opacity-40 font-[300] cursor-pointer">Breaking News</div>
+            <div onClick={() => router.push("/projects/6")} className="opacity-60 hover:opacity-40 font-[300] cursor-pointer">Nike Shoes</div>
+            <div onClick={() => router.push("/projects/3")} className="opacity-60 hover:opacity-40 font-[300] cursor-pointer">SF Media</div>
+            <div onClick={() => router.push("/projects/2")} className="opacity-60 hover:opacity-40 font-[300] cursor-pointer">Franklin Store</div>
           </div>
 
           <div className="flex flex-col gap-3 items-start">
