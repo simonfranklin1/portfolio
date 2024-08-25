@@ -37,7 +37,7 @@ export const projects: Project[] = [
       "Site de Notícias feito de pessoas para pessoas onde os usuários podem criar e publicar suas próprias notícias, além de interagir com outras publicações com curtidas e comentários. O Site é interativo e fácil de utilizar e tem um sistema de login e autenticação.",
     link: "https://breaking-news-lilac.vercel.app/",
     skills: [
-      "TypeScript", "Next.js", "React.js", "Tailwind CSS"
+      "TypeScript", "Next.js", "React.js", "Tailwind CSS", "Mongo DB"
     ],
     projectImg: "/breaking-news-individual-page.png",
     repo: "https://github.com/simonfranklin1/breaking-news-next"

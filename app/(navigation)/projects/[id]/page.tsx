@@ -45,13 +45,13 @@ const ProjectIndividualPage = ({ params }: { params: { id: string } }) => {
               <div className={`font-[300] text-[13px] sm:text-base text-[#47626D] leading-6 sm:leading-8 ${hind.className} mt-4`}>
                 {correctProject.description}
               </div>
-              <div className="mt-6">
+              <div className="mt-4">
                 <p className={`text-2xl text-dark font-sans ${hind.className}`}>
                   Feito Com
                 </p>
                 <div className="flex flex-wrap gap-3 mt-4">
                   {correctProject.skills?.map((skill) => (
-                    <div key={skill} className="flex text-white bg-slate-600 px-4 py-2 rounded-full">
+                    <div key={skill} className="flex text-white bg-slate-600 text-sm px-2 py-1 md:text-base md:px-4 md:py-2 rounded-full">
                       {skill}
                     </div>
                   ))}
@@ -79,13 +79,13 @@ const ProjectIndividualPage = ({ params }: { params: { id: string } }) => {
         <div className="flex items-center justify-between min-w-full">
           <div
             onClick={prevProject}
-            className=" group duration-300 cursor-pointer flex items-center gap-3 text-[#47AEDE] text-xl"
+            className=" group duration-300 cursor-pointer flex items-center gap-3 text-[#47AEDE] text-base md:text-lg lg:text-xl"
           >
             <FaArrowCircleLeft className='group-hover:scale-150 scale-125 duration-300 ease-in-out' />Projeto Anterior
           </div>
           <div
             onClick={nextProject}
-            className="group duration-300 cursor-pointer flex items-center gap-3 text-[#47AEDE] text-xl"
+            className="group duration-300 cursor-pointer flex items-center gap-3 text-[#47AEDE] text-base md:text-lg lg:text-xl"
           >
             Próximo Projeto<FaArrowCircleRight className='group-hover:scale-150 scale-125 duration-300 ease-in-out' />
           </div>
