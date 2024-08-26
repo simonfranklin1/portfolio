@@ -43,8 +43,8 @@ const Slider3D: React.FC = () => {
   }
 
   return (
-    <div className="flex flex-col gap-7 lg:gap-14 items-center relative">
-      <div className="flex flex-col gap-5 min-h-16 min-h-[90px] lg:min-h-[120px]">
+    <div className="flex flex-col gap-7 lg:gap-14 items-center relative pb-4 sm:pb-0">
+      <div className="flex flex-col gap-5 min-h-16 sm:min-h-[90px] lg:min-h-[120px]">
         {activeProject && (
           <div
             className={`text-[#47AEDE] font-recoletaBlack text-3xl md:text-3xl lg:text-5xl xl:text-5xl ${animateTitle ? "project-name" : ""
@@ -72,7 +72,7 @@ const Slider3D: React.FC = () => {
           </span>
         ))}
       </div>
-      <div className="flex justify-around sm:justify-between absolute max-w-[400px] md:max-w-[688px] lg:max-w-[1088px] 2xl:max-w-[1344px] w-full m-auto bottom-[-25%] sm:bottom-[30%] px-6 md:px-0">
+      <div className="flex justify-around sm:justify-between absolute max-w-[400px] md:max-w-[688px] lg:max-w-[1088px] 2xl:max-w-[1344px] w-full m-auto bottom-[-20%] sm:bottom-[30%] px-6 md:px-0">
         <div
           onClick={nextProject}
           className="scale-[2.25] hover:scale-[2.5] duration-300 cursor-pointer"
