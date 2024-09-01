@@ -58,7 +58,7 @@ const SendMeOneEmail = () => {
 
 const ContactLinks = () => {
   return (
-    <div className="flex gap-24 mx-auto max-w-[380px] md:max-w-0 justify-center flex-wrap md:flex-nowrap">
+    <div className="flex sm:gap-24 gap-10 mx-auto max-w-[380px] md:max-w-0 justify-center flex-wrap md:flex-nowrap">
       {
         contactsInfo.map((contact) => (
           <a href={contact.link} key={contact.title} target="_blank" className="flex flex-col gap-4 cursor-pointer items-center text-white hover:text-[#47AEDE] duration-300">
