@@ -5,6 +5,7 @@ import { Hind } from "next/font/google";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Fade } from "react-awesome-reveal";
 
 const hind = Hind({
     subsets: ["latin"],
@@ -112,36 +113,39 @@ const HomeComponent = () => {
                     <div className="grid grid-cols-12">
                         <div className="bg-white flex justify-center col-span-12 md:col-span-5 md:bg-transparent">
                             <div className="container m-auto">
-                                <div className="lg:pl-24 sm:pl-10 pl-0 py-20 md:py-0 md:text-start text-center">
-                                    <p className={`text-[#47AEDE] text-3xl md:text-base lg:text-2xl ${hind.className}`}>
-                                        Oi, meu nome é
-                                    </p>
-                                    <h1 className="text-[#223740] font-recoletaBlack text-5xl md:text-5xl lg:text-7xl xl:text-7xl mt-5 md:mt-3">
-                                        Simon Franklin
-                                    </h1>
-                                    <h2 className={`text-[#223740] py-2 font-bold uppercase md:text-xl ${hind.className}`}>
-                                        Desenvolvedor Front End
-                                    </h2>
-                                    <div className={`flex gap-10 justify-center sm:justify-normal items-center md:mt-5 xl:mt-10 ${hind.className} font-bold`}>
-                                        <a href="#projects"
-                                            className={`cursor-pointer inline-block hover:bg-[#223740] transition-all duration-300 ease-in-out text-white font-bold uppercase bg-[#47AEDE] hover:show-lg hover:translate-y-1 rounded-lg py-3 px-5 md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base ${hind.className}`}
-                                        >
-                                            Projetos
-                                        </a>
-                                        <a
-                                            target="_blank"
-                                            href="https://docs.google.com/document/d/10jVe3tEInT2ziCtU4MPdN6SJX4GrTaQr/edit?usp=drive_link&ouid=113300837558869934481&rtpof=true&sd=true"
-                                            className={`cursor-pointer inline-block bg-[#223740] transition-all duration-300 ease-in-out text-white font-bold uppercase hover:bg-[#47AEDE] hover:show-lg hover:translate-y-1 rounded-lg py-3 px-5 md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base ${hind.className}`}
-                                        >
-                                            Meu Currículo
-                                        </a>
+                                <Fade duration={2000} direction="left">
+                                    <div className="lg:pl-24 sm:pl-10 pl-0 py-20 md:py-0 md:text-start text-center">
+                                        <p className={`text-[#47AEDE] text-3xl md:text-base lg:text-2xl ${hind.className}`}>
+                                            Oi, meu nome é
+                                        </p>
+                                        <h1 className="text-[#223740] font-recoletaBlack text-5xl md:text-5xl lg:text-7xl xl:text-7xl mt-5 md:mt-3">
+                                            Simon Franklin
+                                        </h1>
+                                        <h2 className={`text-[#223740] py-2 font-bold uppercase md:text-xl ${hind.className}`}>
+                                            Desenvolvedor Front End
+                                        </h2>
+
+                                        <div className={`flex gap-10 justify-center sm:justify-normal items-center md:mt-5 xl:mt-10 ${hind.className} font-bold`}>
+                                            <a href="#projects"
+                                                className={`cursor-pointer inline-block hover:bg-[#223740] transition-all duration-300 ease-in-out text-white font-bold uppercase bg-[#47AEDE] hover:show-lg hover:translate-y-1 rounded-lg py-3 px-5 md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base ${hind.className}`}
+                                            >
+                                                Projetos
+                                            </a>
+                                            <a
+                                                target="_blank"
+                                                href="https://docs.google.com/document/d/10jVe3tEInT2ziCtU4MPdN6SJX4GrTaQr/edit?usp=drive_link&ouid=113300837558869934481&rtpof=true&sd=true"
+                                                className={`cursor-pointer inline-block bg-[#223740] transition-all duration-300 ease-in-out text-white font-bold uppercase hover:bg-[#47AEDE] hover:show-lg hover:translate-y-1 rounded-lg py-3 px-5 md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base ${hind.className}`}
+                                            >
+                                                Meu Currículo
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
+                                </Fade>
                             </div>
                         </div>
                         <div className="col-span-12 pt-[50px] md:bg-transparent bg-[#d9eef7] md:pt-[130px] md:col-span-7">
-                            <div className="container m-auto">
-                                <img src="/simonfranklin.png" alt="Profile pics" decoding="async" />
+                            <div className="container m-auto overflow-x-hidden">
+                                <Fade duration={2000} direction="right"><img src="/simonfranklin.png" alt="Profile pics" decoding="async" /></Fade>
                             </div>
                         </div>
                     </div>

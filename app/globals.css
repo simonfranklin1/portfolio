@@ -70,11 +70,17 @@ html {
 
   .timeline-line {
     @apply absolute w-[6px] h-full top-0 left-[31px] lg:left-[50%] translate-x-[-3px] bg-white z-0;
-    animation: moveline 6s linear forwards;
   }
 
   .timeline-item {
     @apply relative py-2 px-[50px] lg:w-[50%] opacity-0;
+  }
+
+  .animate-moveline {
+    animation: moveline 6s linear forwards;
+  }
+  
+  .animate-movedown {
     animation: movedown 1s linear forwards;
   }
 
