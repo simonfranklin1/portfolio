@@ -10,19 +10,6 @@ const hind = Hind({
     weight: ["300", "400", "500", "600", "700"]
 })
 
-import { keyframes } from "@emotion/react";
-
-const sliderAnimation = keyframes`
-    from {
-        opacity: 0;
-        transform: translateY(90px)
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0)
-    }
-`
-
 const Portfolio = () => {
 
     return (
@@ -40,9 +27,9 @@ const Portfolio = () => {
                     </div>
                 </Fade>
             </div>
-            <Reveal keyframes={sliderAnimation} duration={1500}>
+            <Fade  duration={1500} delay={500}>
                 <Slider3D />
-            </Reveal>
+            </Fade>
         </div>
     )
 }

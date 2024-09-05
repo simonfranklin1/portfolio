@@ -33,7 +33,7 @@ const TimeLine = () => {
     return (
         <div ref={timelineRef} className="timeline">
             <div
-                className={`timeline-line ${isInViewport ? 'animate-moveline' : ''}`}
+                className={`timeline-line ${isInViewport ? 'animate-moveline' : 'opacity-0'}`}
             />
             {timeLineInfo.map((item, index) => (
                 <div
