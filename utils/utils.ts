@@ -83,16 +83,16 @@ export const projects: Project[] = [
   },
   {
     id: "5",
-    imgSrc: "/gpt3page-tablet.png",
-    name: "GPT3-Page",
+    imgSrc: "/promptopia-tablet.png",
+    name: "Promptopia",
     description:
-      "Landing Page do Chat GPT versão 3.",
-    link: "https://gpt3-page.vercel.app/",
+      "Ferramenta open-source de prompts de IA para o mundo moderno, onde é possível descobrir, criar e compartilhar prompts criativos.",
+    link: "https://promptopia-beta-cyan.vercel.app/",
     skills: [
-      "React.js", "HTML", "CSS", "JavaScript"
+      "Next.js", "React.js", "Mongo DB", "JavaScript"
     ],
-    projectImg: "/gpt3-page-individual-page.png",
-    repo: "https://github.com/simonfranklin1/gpt3-page"
+    projectImg: "/promptopia-individual-page.png",
+    repo: "https://github.com/simonfranklin1/Promptopia"
   },
   {
     id: "6",
