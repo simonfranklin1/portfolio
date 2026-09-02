@@ -104,6 +104,10 @@ html {
     animation-delay: 4s;
   }
 
+  .timeline-item:nth-child(6) {
+    animation-delay: 5s;
+  }
+
   .text-box {
     @apply relative py-5 px-7 rounded-md text-[15px] bg-[white] text-black z-10;
   }
