@@ -133,7 +133,7 @@ const HomeComponent = () => {
                                             </a>
                                             <a
                                                 target="_blank"
-                                                href="https://docs.google.com/document/d/10jVe3tEInT2ziCtU4MPdN6SJX4GrTaQr/edit?usp=drive_link&ouid=113300837558869934481&rtpof=true&sd=true"
+                                                href="https://docs.google.com/document/d/1AfteKyx-llps94394hG2qnQEaq3TKXlk/edit?usp=sharing&ouid=113300837558869934481&rtpof=true&sd=true"
                                                 className={`cursor-pointer inline-block bg-[#223740] transition-all duration-300 ease-in-out text-white font-bold uppercase hover:bg-[#47AEDE] hover:show-lg hover:translate-y-1 rounded-lg py-3 px-5 md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base ${hind.className}`}
                                             >
                                                 Meu Currículo

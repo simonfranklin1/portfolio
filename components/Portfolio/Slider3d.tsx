@@ -5,6 +5,7 @@ import { Project, projects } from "@/utils/utils";
 
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Slider3D: React.FC = () => {
   const correctOrderProjects = [...projects].reverse();
@@ -38,10 +39,6 @@ const Slider3D: React.FC = () => {
     setRotation((prevRotation) => prevRotation - 60);
   };
 
-  const navigate = (path: string): void => {
-    router.push(path);
-  }
-
   return (
     <div className="flex flex-col gap-7 lg:gap-14 items-center relative pb-4 sm:pb-0">
       <div className="flex flex-col gap-5 min-h-16 sm:min-h-[90px] lg:min-h-[120px]">
@@ -59,9 +56,9 @@ const Slider3D: React.FC = () => {
         style={{ transform: `perspective(1000px) rotateY(${rotation}deg)` }}
       >
         {correctOrderProjects.map((project, index) => (
-          <span
-            onClick={() => navigate(`/projects/${project.id}`)}
+          <Link
             style={{ "--i": index + 1 } as React.CSSProperties}
+            href={`/projects/${project.id}`}
             key={project.id}
           >
             <img
@@ -69,7 +66,7 @@ const Slider3D: React.FC = () => {
               alt={project.name}
               className="absolute top-0 left-0 w-full h-full rounded-[15px] border-black border-[6px] hover:translate-y-[-0.25rem] duration-500 cursor-pointer"
             />
-          </span>
+          </Link>
         ))}
       </div>
       <div className="flex justify-around sm:justify-between absolute max-w-[400px] md:max-w-[688px] lg:max-w-[1088px] 2xl:max-w-[1344px] w-full m-auto bottom-[-20%] sm:bottom-[30%] px-6 md:px-0">

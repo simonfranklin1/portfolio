@@ -118,6 +118,6 @@ export const contactsInfo: ContactI[] = [
   {
     icon: IoDocumentText,
     title: "Currículo",
-    link: "https://docs.google.com/document/d/10jVe3tEInT2ziCtU4MPdN6SJX4GrTaQr/edit?usp=drive_link&ouid=113300837558869934481&rtpof=true&sd=true",
+    link: "https://docs.google.com/document/d/1AfteKyx-llps94394hG2qnQEaq3TKXlk/edit?usp=sharing&ouid=113300837558869934481&rtpof=true&sd=true",
   },
 ];
