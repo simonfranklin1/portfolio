@@ -106,7 +106,8 @@ const TimeLine = () => {
             {timeLineInfo.map((item, index) => (
                 <div
                     key={index}
-                    style={{ animationDelay: `${index * 150}ms` }}
+                    // Cada balão entra quando a linha chega na altura dele (linha dura 2.5s)
+                    style={{ animationDelay: `${(index / timeLineInfo.length) * 2500}ms` }}
                     className={`timeline-item ${isInViewport ? 'animate-movedown' : ''} ${index === 1 || index === 3 ? "right-item" : "left-item"
                         }`}>
                     <div className="timeline-item-point">

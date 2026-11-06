@@ -77,12 +77,13 @@ html {
   }
 
   .animate-moveline {
-    animation: moveline 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    /* linear para a linha "alcançar" cada balão no momento em que ele aparece */
+    animation: moveline 2.5s linear forwards;
   }
 
   .animate-movedown {
     /* atraso por item é definido inline no TimeLine.tsx */
-    animation: movedown 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: movedown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   @media (prefers-reduced-motion: reduce) {

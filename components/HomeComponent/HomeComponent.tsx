@@ -6,11 +6,20 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Fade } from "react-awesome-reveal";
+import { SiPostgresql } from "react-icons/si";
 
 const hind = Hind({
     subsets: ["latin"],
     weight: ["300", "400", "500", "600", "700"]
 })
+
+// object-contain: o logo cabe inteiro no slot sem esticar nem cortar
+const logoClass = "h-12 w-full object-contain px-3"
+// ícone + nome, para logos cujo arquivo original ficaria pequeno demais no slot.
+// O slot é um container (container-type), e o conteúdo usa cqw para escalar com a
+// largura real do slot, que não acompanha os breakpoints (em 640px ele é menor que no celular).
+const lockupClass = "!flex h-12 items-center justify-center px-1 [container-type:inline-size]"
+const lockupInnerClass = "flex items-center gap-[0.35em] whitespace-nowrap [font-size:min(18px,12cqw)]"
 
 const HomeComponent = () => {
     var settings = {
@@ -78,7 +87,16 @@ const HomeComponent = () => {
                     dots: false,
                 },
             },
-
+            {
+                // Abaixo de 768px a caixa do slider fica estreita (max-w-sm), então 3 logos
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                },
+            },
             {
                 breakpoint: 600,
                 settings: {
@@ -156,12 +174,29 @@ const HomeComponent = () => {
                             >
                                 <div className="lg:py-10 sm:py-6 py-2 cursor-all-scroll">
                                     <Slider {...settings}>
-                                        <img src="/mongodb.png" alt="mongodb" className="h-12" />
-                                        <img src="/reactjs.png" alt="reactjs" className="h-12" />
-                                        <img src="/nextjs.png" alt="nextjs" className="h-12" />
-                                        <img src="/typescript.png" alt="typescript" className="h-12" />
-                                        <img src="/expressjs.png" alt="expressjs" className="h-12" />
-                                        <img src="/nodejs.png" alt="nodejs" className="h-12" />
+                                        <img src="/mongodb.png" alt="MongoDB" className={logoClass} />
+                                        <img src="/reactjs.png" alt="React" className={logoClass} />
+                                        <img src="/nextjs.png" alt="Next.js" className={logoClass} />
+                                        <img src="/typescript.png" alt="TypeScript" className={logoClass} />
+                                        <img src="/expressjs.png" alt="Express" className={logoClass} />
+                                        <img src="/nodejs.png" alt="Node.js" className={logoClass} />
+                                        <img src="/nestjs.png" alt="NestJS" className={logoClass} />
+                                        {/* PostgreSQL e TypeORM: logos originais ficariam minúsculos, então ícone + nome */}
+                                        <div className={lockupClass} role="img" aria-label="PostgreSQL">
+                                            <span className={`${lockupInnerClass} ${hind.className}`} aria-hidden>
+                                                <SiPostgresql className="h-[1.75em] w-[1.75em] shrink-0 text-[#336791]" />
+                                                <span className="font-[500] text-[#336791]">PostgreSQL</span>
+                                            </span>
+                                        </div>
+                                        <div className={lockupClass} role="img" aria-label="TypeORM">
+                                            <span className={`${lockupInnerClass} ${hind.className}`} aria-hidden>
+                                                <img src="/typeorm-icon.png" alt="" className="h-[2em] w-auto shrink-0" />
+                                                <span className="tracking-[0.08em] text-[#3d3d3d]">
+                                                    <span className="font-[700]">TYPE</span><span className="font-[300]">ORM</span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <img src="/docker.png" alt="Docker" className={logoClass} />
                                     </Slider>
                                 </div>
                             </div>
