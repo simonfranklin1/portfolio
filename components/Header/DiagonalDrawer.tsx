@@ -21,8 +21,8 @@ const DiagonalDrawer = ({
     <>
       <div className="relative">
         <div
-            onClick={() => setIsOpen(false)} 
-            className={`z-50 ${(pathname === "/" || pathname.includes("/projects")) ? "top-[0px]" : "top-[100px]"} cursor-pointer fixed w-14 h-14 lg:w-24 lg:h-24 bg-[#48AFDE] flex justify-center items-center rounded-br-3xl`}>
+          onClick={() => setIsOpen(false)}
+          className={`z-50 ${(pathname === "/" || pathname.includes("/projects")) ? "top-[0px]" : "top-[100px]"} cursor-pointer fixed w-14 h-14 lg:w-24 lg:h-24 bg-[#48AFDE] flex justify-center items-center rounded-br-3xl`}>
           <div
             className="relative w-7 lg:2-10 h-7 lg:h-7 flex justify-center items-center"
           >
@@ -47,13 +47,13 @@ const DiagonalDrawer = ({
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   className="w-12 h-12 text-white"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
                   />
                 </svg>
@@ -71,7 +71,7 @@ const DiagonalDrawer = ({
                 <li className="group my-4 xl:my-4 2xl:my-6 relative">
                   <div className="inline-block relative">
                     <a
-                      href={ pathname === "/" ? "#home" : "/"}
+                      href={pathname === "/" ? "#home" : "/"}
                       onClick={() => {
                         setSelectedIndex(0)
                         setIsOpen(false)
@@ -134,9 +134,28 @@ const DiagonalDrawer = ({
                         setIsOpen(false)
                       }}
                     >
-                      Contato
+                      Depoimentos
                     </a>
                     {selectedIndex === 3 ? (
+                      <div className="absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100 bg-[#48AFDE] rounded-xl -z-10" />
+                    ) : (
+                      null
+                    )}
+                    <div className="absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 rotate-0 opacity-0 group-hover:-rotate-6 group-hover:opacity-100 bg-[#48AFDE] rounded-xl -z-10" />
+                  </div>
+                </li>
+                <li className="group my-4 xl:my-4 2xl:my-6 relative">
+                  <div className="inline-block relative">
+                    <a
+                      href="/#contact"
+                      onClick={() => {
+                        setSelectedIndex(4)
+                        setIsOpen(false)
+                      }}
+                    >
+                      Contato
+                    </a>
+                    {selectedIndex === 4 ? (
                       <div className="absolute top-2 -left-2 w-full h-full transform-gpu transition-all duration-300 -rotate-6 opacity-100 group-hover:-rotate-6 group-hover:opacity-100 bg-[#48AFDE] rounded-xl -z-10" />
                     ) : (
                       null

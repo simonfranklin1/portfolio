@@ -54,9 +54,9 @@ const Header = () => {
                     </div>
                 </div>
 
-                <nav className='invisible xl:visible xl:max-w-4xl 2xl:max-w-7xl mx-auto '>
+                <nav className='invisible xl:visible overflow-hidden xl:overflow-visible xl:max-w-4xl 2xl:max-w-7xl mx-auto '>
                     <ul className='flex font-recoletaBlack flex-row items-center h-24'>
-                        <li className='group text-2xl relative font-bold mr-20 '>
+                        <li className='group text-2xl relative font-bold mr-16 '>
                             {selectedIndex === 0 ? (
                                 <span className="menu-effect transform opacity-100 -rotate-12 group-hover:-rotate-12 group-hover:opacity-100" />
                             ) : (
@@ -70,7 +70,7 @@ const Header = () => {
                                 Início
                             </a>
                         </li>
-                        <li className='group text-2xl relative font-bold mr-20 '>
+                        <li className='group text-2xl relative font-bold mr-16 '>
                             {selectedIndex === 1 ? (
                                 <span className="menu-effect transform opacity-100 -rotate-12 group-hover:-rotate-12 group-hover:opacity-100" />
                             ) : (
@@ -84,7 +84,7 @@ const Header = () => {
                                 Portfólio
                             </a>
                         </li>
-                        <li className='group text-2xl relative font-bold mr-20 '>
+                        <li className='group text-2xl relative font-bold mr-16 '>
                             {selectedIndex === 2 ? (
                                 <span className="menu-effect transform opacity-100 -rotate-12 group-hover:-rotate-12 group-hover:opacity-100" />
                             ) : (
@@ -98,16 +98,30 @@ const Header = () => {
                                 Sobre mim
                             </a>
                         </li>
-                        <li className='group text-2xl relative font-bold mr-20 '>
+                        <li className='group text-2xl relative font-bold mr-16 '>
                             {selectedIndex === 3 ? (
                                 <span className="menu-effect transform opacity-100 -rotate-12 group-hover:-rotate-12 group-hover:opacity-100" />
                             ) : (
                                 <span className="menu-effect transform opacity-0 rotate-12 group-hover:-rotate-12 group-hover:opacity-100" />
                             )}
                             <a
-                                href="/#contact"
+                                href="/#testimonial"
                                 className={`menu-item ${selectedIndex === 3 ? "text-black" : ""} text-[#666d47] group-hover:text-black`}
                                 onClick={() => setSelectedIndex(3)}
+                            >
+                                Depoimentos
+                            </a>
+                        </li>
+                        <li className='group text-2xl relative font-bold mr-16 '>
+                            {selectedIndex === 4 ? (
+                                <span className="menu-effect transform opacity-100 -rotate-12 group-hover:-rotate-12 group-hover:opacity-100" />
+                            ) : (
+                                <span className="menu-effect transform opacity-0 rotate-12 group-hover:-rotate-12 group-hover:opacity-100" />
+                            )}
+                            <a
+                                href="/#contact"
+                                className={`menu-item ${selectedIndex === 4 ? "text-black" : ""} text-[#666d47] group-hover:text-black`}
+                                onClick={() => setSelectedIndex(4)}
                             >
                                 Contato
                             </a>

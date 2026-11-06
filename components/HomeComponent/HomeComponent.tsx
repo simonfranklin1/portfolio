@@ -113,7 +113,7 @@ const HomeComponent = () => {
                     <div className="grid grid-cols-12">
                         <div className="bg-white flex justify-center col-span-12 md:col-span-5 md:bg-transparent">
                             <div className="container m-auto">
-                                <Fade duration={2000} direction="left">
+                                <Fade duration={1000} direction="left" triggerOnce>
                                     <div className="lg:pl-24 sm:pl-10 pl-0 py-20 md:py-0 md:text-start text-center">
                                         <p className={`text-[#47AEDE] text-3xl md:text-base lg:text-2xl ${hind.className}`}>
                                             Oi, meu nome é
@@ -145,7 +145,7 @@ const HomeComponent = () => {
                         </div>
                         <div className="col-span-12 pt-[50px] md:bg-transparent bg-[#d9eef7] md:pt-[130px] md:col-span-7">
                             <div className="container m-auto overflow-x-hidden">
-                                <Fade duration={2000} direction="right"><img src="/simonfranklin.png" alt="Profile pics" decoding="async" /></Fade>
+                                <Fade duration={1000} direction="right" triggerOnce><img src="/simonfranklin.png" alt="Profile pics" decoding="async" /></Fade>
                             </div>
                         </div>
                     </div>

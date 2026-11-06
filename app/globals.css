@@ -77,35 +77,23 @@ html {
   }
 
   .animate-moveline {
-    animation: moveline 6s linear forwards;
+    animation: moveline 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
   .animate-movedown {
-    animation: movedown 1s linear forwards;
+    /* atraso por item é definido inline no TimeLine.tsx */
+    animation: movedown 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
-  .timeline-item:nth-child(1) {
-    animation-delay: 0s;
-  }
+  @media (prefers-reduced-motion: reduce) {
+    .timeline-item {
+      opacity: 1;
+    }
 
-  .timeline-item:nth-child(2) {
-    animation-delay: 1s;
-  }
-
-  .timeline-item:nth-child(3) {
-    animation-delay: 2s;
-  }
-
-  .timeline-item:nth-child(4) {
-    animation-delay: 3s;
-  }
-
-  .timeline-item:nth-child(5) {
-    animation-delay: 4s;
-  }
-
-  .timeline-item:nth-child(6) {
-    animation-delay: 5s;
+    .animate-moveline,
+    .animate-movedown {
+      animation: none;
+    }
   }
 
   .text-box {

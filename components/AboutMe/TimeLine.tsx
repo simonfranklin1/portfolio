@@ -82,7 +82,11 @@ const TimeLine = () => {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                setIsInViewport(entry.isIntersecting); // Atualiza o state quando o container estiver visível
+                // Anima só na primeira vez que a timeline aparece
+                if (entry.isIntersecting) {
+                    setIsInViewport(true);
+                    observer.disconnect();
+                }
             },
             { threshold: 0.2 } // A porcentagem do container visível para ativar
         );
@@ -91,11 +95,7 @@ const TimeLine = () => {
             observer.observe(timelineRef.current);
         }
 
-        return () => {
-            if (timelineRef.current) {
-                observer.unobserve(timelineRef.current);
-            }
-        };
+        return () => observer.disconnect();
     }, []);
 
     return (
@@ -106,6 +106,7 @@ const TimeLine = () => {
             {timeLineInfo.map((item, index) => (
                 <div
                     key={index}
+                    style={{ animationDelay: `${index * 150}ms` }}
                     className={`timeline-item ${isInViewport ? 'animate-movedown' : ''} ${index === 1 || index === 3 ? "right-item" : "left-item"
                         }`}>
                     <div className="timeline-item-point">
